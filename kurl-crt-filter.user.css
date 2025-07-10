@@ -1,0 +1,39 @@
+/* ==UserStyle==
+@name           CRT for YouTube
+@namespace      https://github.com/jkpair/kurl-crt-filter/
+@version        0.6.9
+@description    CRT effect for watching retro anime and console gaming videos on YouTube
+@author         kurl_marx
+==/UserStyle== */
+@-moz-document domain("youtube.com") {
+  /* Video Filter Effects */
+  ytd-player video {
+    filter:
+      brightness(.93)
+      contrast(1.2)
+      saturate(1.15)
+      hue-rotate(-5deg)
+      drop-shadow(0 0 5px rgba(0,255,0,0.15));
+    image-rendering: pixelated;
+    border-radius: 10px;
+    z-index: 1 !important;
+  }
+
+  /* Scanlines Overlay */
+  ytd-player::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    background:
+      repeating-linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2) 0px,
+        rgba(0, 0, 0, .5) 2px,
+        transparent 2px,
+        transparent 4px
+      );
+    mix-blend-mode: multiply;
+    z-index: 9999;
+  }
+}
