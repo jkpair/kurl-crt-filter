@@ -1,7 +1,7 @@
 CRT Filter for Youtube using Stylus [Chrome Extension]
 
-Install Stylus extension
-https://add0n.com/stylus.html
+Install Stylus extension</br>
+LINK: https://add0n.com/stylus.html
 
 Load CSS into extension. You can use the link below.
  </br>
